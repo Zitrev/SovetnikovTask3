@@ -1,0 +1,14 @@
+from Pakets import google as tr
+def Main():
+    text = input("Enter string: ")
+    detect = tr.LangDetect(text)
+    print(detect)
+    language = input("Enter which language you want\nja,en,uk:\n")
+    print(tr.CodeLang(language))
+    result = tr.TransLate(text, detect, language)
+    print(result)
+    print(tr.LanguageList("file", text))
+
+
+if __name__ == "__main__":
+    Main()
